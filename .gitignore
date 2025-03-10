@@ -1,1 +1,35 @@
+# Fichiers d'environnement
 .env
+
+# Cache Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Paramètres de l'éditeur
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dépendances et environnements virtuels
+venv/
+.env/
+*.egg-info/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Fichiers de logs
+logs/
+*.log
+
+# Fichiers temporaires et sauvegardes
+*.bak
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Configuration Docker (si utilisée)
+docker-compose.override.yml
