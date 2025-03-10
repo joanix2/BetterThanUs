@@ -1,0 +1,10 @@
+{
+    "type": "function",
+    "function": {
+        "name": "automate_repetitive_task",
+        "description": "Automate a specified repetitive task given its details.",
+        "parameters": {
+            "task_detail": "string"
+        }
+    }
+}

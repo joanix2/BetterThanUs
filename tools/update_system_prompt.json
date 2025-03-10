@@ -1,0 +1,19 @@
+{
+  "type": "function",
+  "function": {
+    "name": "update_system_prompt",
+    "description": "Met à jour le prompt système de l'agent.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "new_prompt": {
+          "type": "string",
+          "description": "Le nouveau prompt système que l'agent doit utiliser."
+        }
+      },
+      "required": ["new_prompt"],
+      "additionalProperties": false
+    },
+    "strict": true
+  }
+}

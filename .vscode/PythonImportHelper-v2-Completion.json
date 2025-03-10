@@ -1,0 +1,89 @@
+[
+    {
+        "label": "inspect",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "inspect",
+        "description": "inspect",
+        "detail": "inspect",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "traceback",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "traceback",
+        "description": "traceback",
+        "detail": "traceback",
+        "documentation": {}
+    },
+    {
+        "label": "OpenAI",
+        "importPath": "openai",
+        "description": "openai",
+        "isExtraImport": true,
+        "detail": "openai",
+        "documentation": {}
+    },
+    {
+        "label": "LLM_Agent",
+        "importPath": "agent",
+        "description": "agent",
+        "isExtraImport": true,
+        "detail": "agent",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "automate_repetitive_task",
+        "kind": 2,
+        "importPath": "functions.automate_repetitive_task",
+        "description": "functions.automate_repetitive_task",
+        "peekOfCode": "def automate_repetitive_task(task_detail):\n    # Code to automate a specific repetitive task based on task_detail information\n    pass",
+        "detail": "functions.automate_repetitive_task",
+        "documentation": {}
+    },
+    {
+        "label": "LLM_Agent",
+        "kind": 6,
+        "importPath": "agent",
+        "description": "agent",
+        "peekOfCode": "class LLM_Agent:\n    def __init__(self, api_key):\n        self.task_stack = []  # Pile de tâches\n        self.knowledge_base = {}  # Stocke les fonctions créées\n        self.api_key = api_key\n        self.client = OpenAI(api_key=api_key) # , base_url=\"https://api.deepseek.com\")\n        self.system_prompt = self.load_system_prompt(os.path.join(\"prompts\",\"system.txt\"))\n        self.tools = self.load_tools(\"tools\")\n        self.messages = [{\"role\": \"system\", \"content\": self.system_prompt }]\n        print(self.tools)",
+        "detail": "agent",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main():\n    load_dotenv()\n    api_key = os.getenv(\"OPENAI_API_KEY\")\n    if not api_key:\n        print(\"Clé API non trouvée. Assurez-vous que le fichier .env contient 'OPENAI_API_KEY'.\")\n        return\n    agent = LLM_Agent(api_key)\n    print(\"Agent LLM initialisé.\")\n    agent.add_task(\"Mettre en place des tâches concrètes pour optimiser les performances et évoluer vers une version améliorée de toi-même.\")\n    agent.add_task(\"Fais le maintenant.\")",
+        "detail": "main",
+        "documentation": {}
+    }
+]

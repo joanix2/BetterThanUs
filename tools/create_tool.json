@@ -1,0 +1,52 @@
+{
+  "type": "function",
+  "function": {
+    "name": "create_tool",
+    "description": "Crée un nouvel outil et l'ajoute à l'agent.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "function_code": {
+          "type": "string",
+          "description": "Le code Python de la fonction à créer."
+        },
+        "tool_definition": {
+          "type": "object",
+          "description": "La définition du tool au format JSON.",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["function"]
+            },
+            "function": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "Le nom du tool."
+                },
+                "description": {
+                  "type": "string",
+                  "description": "Une brève description du tool."
+                },
+                "parameters": {
+                  "type": "object",
+                  "description": "Les paramètres requis pour ce tool.",
+                  "properties": {},
+                  "additionalProperties": false
+                }
+              },
+              "required": ["name", "description", "parameters"],
+              "additionalProperties": false
+            }
+          },
+          "required": ["type", "function"],
+          "additionalProperties": false
+        }
+      },
+      "required": ["function_code", "tool_definition"],
+      "additionalProperties": false
+    },
+    "strict": true
+  }
+}

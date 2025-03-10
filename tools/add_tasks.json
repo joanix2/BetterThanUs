@@ -1,0 +1,22 @@
+{
+  "type": "function",
+  "function": {
+    "name": "add_tasks",
+    "description": "Ajoute plusieurs tâches à la pile de l'agent.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "tasks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Une liste de tâches à ajouter à la pile."
+        }
+      },
+      "required": ["tasks"],
+      "additionalProperties": false
+    },
+    "strict": true
+  }
+}

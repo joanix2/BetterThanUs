@@ -1,0 +1,19 @@
+{
+  "type": "function",
+  "function": {
+    "name": "add_task",
+    "description": "Ajoute une nouvelle tâche à la pile de l'agent.",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "task": {
+          "type": "string",
+          "description": "La tâche à ajouter à la pile."
+        }
+      },
+      "required": ["task"],
+      "additionalProperties": false
+    },
+    "strict": true
+  }
+}
